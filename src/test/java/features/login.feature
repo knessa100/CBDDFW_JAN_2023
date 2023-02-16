@@ -1,12 +1,12 @@
 Feature: Login Feature
-
+  @regression @smoke @sanity
   Scenario: User should be able to login with valid email and password
     Given User in TalentTEK Homepage
     And User enter valid email address
     And User enter valid password
     When User clicks on Log In button
     Then User should be able to successfully login
-
+    @smoke @hb
   Scenario: User should not be able to login with valid email and invalid password
     Given User in TalentTEK Homepage
     And User enter valid email address
